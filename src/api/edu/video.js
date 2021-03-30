@@ -12,13 +12,19 @@ export default {
     },
     
     //删除小节
-    dalateVideo(id) {
+    deleteVideo(id) {
         return request({
             url: '/eduservice/video/'+id,
             method: 'delete'
         })
     },
-
+    //删除视频
+    deleteAliyunvod(id){
+        return request({
+           url: '/eduvod/video/removeAlyVideo/'+id,
+           method: 'delete'
+        })
+    },
     //根据章节id查询
    getVideo(id) {
         return request({
